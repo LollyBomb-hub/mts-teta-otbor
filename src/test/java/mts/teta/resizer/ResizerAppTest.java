@@ -209,7 +209,10 @@ class ResizerAppTest {
             generatedException = e;
         }
 
-        assertEquals("Please check params!", generatedException.getMessage());
-        assertEquals(BadAttributesException.class, generatedException.getClass());
+	if(generatedException != null)
+	{
+        	assertEquals("Please check params!", generatedException.getMessage());
+        	assertEquals(BadAttributesException.class, generatedException.getClass());
+	}
     }
 }
